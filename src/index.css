@@ -5,6 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: #DAF7A6;
+}
+
+li {
+  border-bottom: 1px solid #ccc;
+  width: 200px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+div{
+  width: 500px;
+  margin: auto;
+}
+
+ul {
+  width: 200px;
+  margin: auto;
 }
 
 code {
