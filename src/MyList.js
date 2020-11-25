@@ -8,14 +8,15 @@ class MyList extends Component {
     toDoItemArray: this.props.theList
   }
 
-  clearList = (e) => {
+  clearList = () => {
+    console.log('Clear list fired')
     this.setState({
       toDoItemArray: []
     })
   }
   
   render() {
-    let todoItems = this.props.theList.map((item, index) => (
+    let todoItems = this.state.toDoItemArray.map((item, index) => (
       <ListItem doThis={item} key={'todo' + index}/>    
     ))
     
