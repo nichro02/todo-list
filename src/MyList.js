@@ -3,6 +3,17 @@ import ListItem from './ListItem'
 import './App.css'
 
 class MyList extends Component {
+  
+  state = {
+    toDoItemArray: this.props.theList
+  }
+
+  clearList = (e) => {
+    this.setState({
+      toDoItemArray: []
+    })
+  }
+  
   render() {
     let todoItems = this.props.theList.map((item, index) => (
       <ListItem doThis={item} key={'todo' + index}/>    
@@ -14,6 +25,7 @@ class MyList extends Component {
         <ul>
           {todoItems}
         </ul>
+        <button onClick={this.clearList}>Finished the list!</button>
       </div>
     )
   }
